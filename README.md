@@ -21,8 +21,12 @@ The goal of the project is to reproduce the numerical results of the paper, incl
 - Reproductions of Figures 2 & 4 (Wealth Distribution Evolution & Optimal Policy Map)
 
 ## Key Files:
+### `BaselineRecreation.mlx`
+- This recreates Section 4.1 of the paper using the base parameters given, and is used as a yardstick for the numerical experiments
 
-- Baseline Recreation recreates  Section 4.1 of the paper
+### `NumExperiments.mlx`
+- Main Run file
+- Implements the modular MATLAB functions to run experiments regarding Wealth Grid Resolution and Standard Deviation of Grid
 
 ## Model Overview:
 The model solves a finite-horizon dynamic stochastic control problem:
@@ -329,12 +333,15 @@ For each combination of `n_w` and `n_s` tested above, the experiment compares:
 
 #### Wealth Distribution Evolution (Figure 2)
 
-Using `compute_wealth_ccdf.m` and `plot_wealth_distribution.m`, the code produces a figure showing:
+Using `compute_wealth_ccdf.m` and `plot_wealth_distribution.m`, the code produces the following figure showing:
 
 - The complementary cumulative distribution function (CCDF) of wealth at each time t = 1,…,T.
 - Each curve plots `P(W_t ≥ w)` against wealth `w` under the optimal dynamic policy.
 
+![Figure 2: Wealth Distribution](results/wealthDistEvolution.png)
+
 This reproduces the qualitative behavior of Figure 2 in the paper, showing how the distribution of wealth shifts and spreads over time.
+
 
 #### Optimal Policy Map (Figure 4)
 
@@ -343,6 +350,8 @@ Using `plot_policy_map.m`, the code produces a heatmap showing:
 - Time on the x-axis
 - Wealth on the y-axis (often on a log scale)
 - Optimal portfolio index as color
+
+![Figure 4: Optimal Policy Map](results/OptimalPolicy.png)
 
 This matches the structure of Figure 4 in the paper:
 
