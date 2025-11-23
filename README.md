@@ -338,7 +338,7 @@ Using `compute_wealth_ccdf.m` and `plot_wealth_distribution.m`, the code produce
 - The complementary cumulative distribution function (CCDF) of wealth at each time t = 1,…,T.
 - Each curve plots `P(W_t ≥ w)` against wealth `w` under the optimal dynamic policy.
 
-![Figure 2: Wealth Distribution](results/wealthDistEvolution.png)
+![Figure 2: Wealth Distribution](figures/wealthDistEvolution.png)
 
 This reproduces the qualitative behavior of Figure 2 in the paper, showing how the distribution of wealth shifts and spreads over time.
 
@@ -351,7 +351,7 @@ Using `plot_policy_map.m`, the code produces a heatmap showing:
 - Wealth on the y-axis (often on a log scale)
 - Optimal portfolio index as color
 
-![Figure 4: Optimal Policy Map](results/OptimalPolicy.png)
+![Figure 4: Optimal Policy Map](figures/OptimalPolicy.png)
 
 This matches the structure of Figure 4 in the paper:
 
